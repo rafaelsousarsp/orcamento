@@ -177,6 +177,23 @@
 
   .footer{display:flex;justify-content:space-between;align-items:center;margin-top:26px;padding-top:14px;border-top:1px solid var(--line);font-size:10.5px;color:var(--dim)}
 
+  .costs-note{font-size:11px;color:var(--mut);margin-top:10px;line-height:1.5}
+  .costs-tag td{font-weight:700;color:var(--ink)}
+
+  /* prototype CTA */
+  .proto{display:block;text-decoration:none;color:inherit;border-radius:16px;overflow:hidden;border:1px solid var(--line-2);box-shadow:var(--shadow);background:#0f1a13;margin-top:6px}
+  .proto-grid{display:grid;grid-template-columns:1.05fr 1fr}
+  .proto-preview{position:relative;background:linear-gradient(150deg,#12241a,#0c150f);padding:20px;min-height:230px;display:flex;align-items:center;justify-content:center}
+  .proto-play{position:absolute;width:66px;height:66px;border-radius:50%;background:rgba(43,154,102,.95);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.45);z-index:3}
+  .proto-play svg{width:26px;height:26px;color:#fff;margin-left:4px}
+  .proto-body{padding:26px 28px;background:linear-gradient(160deg,#14301f,#0f1a13);color:#eef4ef;display:flex;flex-direction:column;justify-content:center}
+  .proto-kick{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--moss,#97BC62)}
+  .proto-body h2{color:#fff;font-size:25px;margin:8px 0 6px}
+  .proto-body p{color:#c4d4c9;font-size:13px;margin-bottom:14px}
+  .proto-btn{display:inline-flex;align-items:center;gap:9px;align-self:flex-start;background:var(--green);color:#fff;font-weight:700;font-size:13.5px;padding:11px 18px;border-radius:9px}
+  .proto-btn svg{width:15px;height:15px}
+  .proto-url{font-size:10px;color:#7f968a;margin-top:12px;word-break:break-all;line-height:1.4}
+
   @media print{
     body{background:#fff}
     .page{margin:0;box-shadow:none;width:auto;min-height:auto;page-break-after:always}
@@ -434,12 +451,61 @@
     </div>
   </div>
 
+  <div class="eyebrow" style="margin-top:20px">Custos de plataforma · assinaturas do contratante</div>
+  <table>
+    <thead><tr><th>Assinatura</th><th>Custo estimado</th><th style="text-align:left">Aplicação</th></tr></thead>
+    <tbody>
+      <tr><td>Power BI Pro</td><td>~R$ 80,20 / usuário·mês</td><td style="text-align:left">Por usuário que acessa os relatórios</td></tr>
+      <tr><td>SharePoint (Microsoft 365)</td><td>~R$ 80,20 / usuário·mês *</td><td style="text-align:left">* Verificar — pode já estar incluso no Office 365 da empresa</td></tr>
+      <tr><td>Azure SQL</td><td>~R$ 50 a R$ 300 / mês</td><td style="text-align:left">Banco central — apenas no Pacote Completo; escala conforme o volume</td></tr>
+    </tbody>
+  </table>
+  <p class="costs-note">Valores de referência, assinados no CNPJ do contratante e dimensionados no diagnóstico. O <strong>Pacote Essencial não utiliza Azure</strong> (roda em SharePoint + Power BI). Como a empresa já usa o Microsoft 365, o SharePoint tende a não gerar custo adicional.</p>
+
   <div class="callout" style="margin-top:16px">
     <div class="ct">Formalização</div>
     <p>Contrato de prestação de serviços com escopo delimitado, confidencialidade (NDA), propriedade intelectual dos dashboards e termo de aceite por fase. Licenciamento e infraestrutura são de responsabilidade do contratante.</p>
   </div>
 
-  <div class="accept">
+  <div class="footer"><span>Proposta válida por 30 dias · valores em reais (BRL)</span><span>06</span></div>
+</section>
+
+<!-- ============ PROTÓTIPO + ACEITE ============ -->
+<section class="page">
+  <div class="eyebrow">Veja funcionando</div>
+  <div class="kicker"><h2><span class="sec-no">07</span>Protótipo da plataforma</h2></div>
+
+  <p class="lead">Um protótipo já está publicado e disponível para exploração. Clique para abrir o relatório interativo no Power BI.</p>
+
+  <a class="proto" href="https://app.powerbi.com/view?r=eyJrIjoiYjgxODBiZmQtZDQ5Yi00OWJkLTg2N2EtMjM5NGRjZWM0MmZjIiwidCI6ImVlNzlkZjgwLWJjMjctNDk0Yy04ZGY2LTM5ZWJhOGNiNjRkOSJ9" target="_blank" rel="noopener">
+    <div class="proto-grid">
+      <div class="proto-preview">
+        <div class="proto-play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+        <svg viewBox="0 0 300 200" width="100%" height="200" style="opacity:.9">
+          <rect x="10" y="12" width="80" height="34" rx="5" fill="#1b3527"/><rect x="20" y="20" width="34" height="6" rx="3" fill="#4f6f5c"/><text x="20" y="41" font-family="Segoe UI,Arial" font-size="15" font-weight="bold" fill="#8fd0aa">22.480</text>
+          <rect x="100" y="12" width="80" height="34" rx="5" fill="#1b3527"/><rect x="110" y="20" width="34" height="6" rx="3" fill="#4f6f5c"/><text x="110" y="41" font-family="Segoe UI,Arial" font-size="15" font-weight="bold" fill="#8fd0aa">2,73</text>
+          <rect x="190" y="12" width="100" height="34" rx="5" fill="#2b2018"/><rect x="200" y="20" width="34" height="6" rx="3" fill="#6f5a44"/><text x="200" y="41" font-family="Segoe UI,Arial" font-size="15" font-weight="bold" fill="#e9b23c">0,21%</text>
+          <rect x="10" y="56" width="170" height="132" rx="6" fill="#132b1e"/>
+          <rect x="26" y="150" width="16" height="26" rx="2" fill="#2b9a66"/><rect x="52" y="132" width="16" height="44" rx="2" fill="#2b9a66"/><rect x="78" y="112" width="16" height="64" rx="2" fill="#2b9a66"/><rect x="104" y="126" width="16" height="50" rx="2" fill="#2b9a66"/><rect x="130" y="100" width="16" height="76" rx="2" fill="#39c07f"/>
+          <polyline points="20,90 50,80 80,84 110,70 140,74 170,64" fill="none" stroke="#8fd0aa" stroke-width="2.4"/>
+          <rect x="190" y="56" width="100" height="132" rx="6" fill="#132b1e"/>
+          <circle cx="240" cy="112" r="40" fill="none" stroke="#1f4a32" stroke-width="14"/>
+          <circle cx="240" cy="112" r="40" fill="none" stroke="#39c07f" stroke-width="14" stroke-dasharray="150 251" transform="rotate(-90 240 112)"/>
+        </svg>
+      </div>
+      <div class="proto-body">
+        <div class="proto-kick">Protótipo ao vivo</div>
+        <h2>Explore a plataforma agora</h2>
+        <p>Relatório interativo publicado no Power BI, com navegação por segmentação, indicadores e o conceito do mapa da propriedade.</p>
+        <span class="proto-btn">Abrir no Power BI
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17L17 7M9 7h8v8"/></svg>
+        </span>
+        <div class="proto-url">app.powerbi.com/view?r=eyJrIjoiYjgxODBiZmQtZDQ5Yi00OWJkLTg2N2EtMjM5NGRjZWM0MmZjIiwidCI6ImVlNzlkZjgwLWJjMjctNDk0Yy04ZGY2LTM5ZWJhOGNiNjRkOSJ9</div>
+      </div>
+    </div>
+  </a>
+
+  <div class="accept" style="margin-top:22px">
     <h2>Vamos começar</h2>
     <p style="margin-top:6px">Recomendamos iniciar pelo <strong style="color:#7fd3a3">Pacote Essencial</strong> como prova de valor: baixo risco para a diretoria, arquitetura validada e a plataforma demonstrada antes do investimento maior — com caminho natural de evolução para a versão completa.</p>
     <div class="sign">
@@ -448,7 +514,7 @@
     </div>
   </div>
 
-  <div class="footer"><span>Proposta válida por 30 dias · valores em reais (BRL)</span><span>06</span></div>
+  <div class="footer"><span>Proposta válida por 30 dias · valores em reais (BRL)</span><span>07</span></div>
 </section>
 
 </body>
